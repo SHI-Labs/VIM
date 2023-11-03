@@ -1,0 +1,59 @@
+# VIM config 
+# ------------------------------------------------------------------------
+# Modified from MGMatting (https://github.com/yucornetto/MGMatting)
+# ------------------------------------------------------------------------
+# Refer to utils/config.py for definition and options.
+
+version = "VIM"
+dist = false
+
+[model]
+trimap_channel = 3
+mask_channel = 2
+batch_size = 2
+num_frames = 10
+imagenet_pretrain = true
+imagenet_pretrain_path = "pretrain/model_best_resnet34_En_nomixup.pth"
+self_refine_width1 = 30
+self_refine_width2 = 15
+    [model.arch]
+    encoder = "res_shortcut_encoder_29"
+    decoder = "res_shortcut_decoder_tmp_22"
+    dec_T = 10
+    dec_B = 2
+
+[train]
+total_step = 20000
+warmup_step = 2000
+val_step = 5000
+clip_grad = true
+G_lr = 1e-3
+rec_weight = 1.0
+comp_weight = 1.0
+lap_weight = 1.0
+alpha_weight = 1.0
+tmp_weight = 1.0
+# Uncomment to resume training
+#resume_checkpoint = "latest_model"
+#reset_lr = false
+
+[data]
+fg_alpha_dir = "/path/to/fgalpha"
+bg_img_dir = "/path/to/bgimg"
+bg_video_dir = "/path/to/bgvideo"
+workers = 0
+crop_size = 512
+cutmask_prob = 0.25
+augmentation = true
+random_interp = true
+real_world_aug = false
+
+[log]
+tensorboard_path = "outputs/logs/tensorboard"
+tensorboard_step = 100
+tensorboard_image_step = 2000
+logging_path = "outputs/logs/stdout"
+logging_step =  10
+logging_level = "INFO"
+checkpoint_path = "outputs/checkpoints"
+checkpoint_step = 2000
