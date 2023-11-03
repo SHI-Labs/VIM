@@ -1,0 +1,8 @@
+tqdm
+scipy
+opencv-python
+toml
+
+
+
+
