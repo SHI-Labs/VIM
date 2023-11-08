@@ -2,11 +2,11 @@
 
 [Jiachen Li](https://chrisjuniorli.github.io/), Roberto Henschel, [Vidit Goel](https://vidit98.github.io/), Marianna Ohanyan, Shant Navasardyan, [Humphrey Shi](https://www.humphreyshi.com/)
 
-[[`arXiv`]()] [[`Code`](https://github.com/SHI-Labs/VIM)]
+[[`arXiv`](https://arxiv.org/pdf/2311.04212.pdf)] [[`Code`](https://github.com/SHI-Labs/VIM)]
 
 ## Updates
 
-11/02/2023: [Codes](https://github.com/SHI-Labs/VIM) and [arxiv]() are released.
+11/02/2023: [Codes](https://github.com/SHI-Labs/VIM) and [arxiv](https://arxiv.org/pdf/2311.04212.pdf) are released.
 
 ## Installation
 
